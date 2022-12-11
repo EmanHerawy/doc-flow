@@ -2,15 +2,15 @@
 
 pragma solidity 0.8.9;
 
-import { IAxelarGasService } from '../lib/axelar-gmp-sdk-solidity/contracts/interfaces/IAxelarGasService.sol';
+// import { IAxelarGasService } from '../lib/axelar-gmp-sdk-solidity/contracts/interfaces/IAxelarGasService.sol';
 import { IAxelarGateway } from '../lib/axelar-gmp-sdk-solidity/contracts/interfaces/IAxelarGateway.sol';
-import { AxelarExecutable } from '../lib/axelar-gmp-sdk-solidity/contracts/executables/AxelarExecutable.sol';
+// import { AxelarExecutable } from '../lib/axelar-gmp-sdk-solidity/contracts/executables/AxelarExecutable.sol';
 // import { Upgradable } from '@axelar-network/axelar-gmp-sdk-solidity/contracts/upgradables/Upgradable.sol';
-import { StringToAddress, AddressToString } from '../lib/axelar-gmp-sdk-solidity/contracts/StringAddressUtils.sol';
+// import { StringToAddress, AddressToString } from '../lib/axelar-gmp-sdk-solidity/contracts/StringAddressUtils.sol';
 
 contract ERC20CrossChain is AxelarExecutable {
-    using StringToAddress for string;
-    using AddressToString for address;
+    // using StringToAddress for string;
+    // using AddressToString for address;
 
  
     event NextStep(bytes32 CurrentStep, bytes32 NextStep,address caller);
@@ -48,8 +48,8 @@ string  destinationChain;
        address [] memory stepAuthors,
        bytes32 [] memory crossChainSteps,
        uint[] memory crossChainStepAmount
-    ) AxelarExecutable(gateway_) {
-        gasReceiver = IAxelarGasService(gasReceiver_);
+    )/* AxelarExecutable(gateway_)*/ {
+        // gasReceiver = IAxelarGasService(gasReceiver_);
         destinationChain= destinationChain_;
          destinationAddress=destinationAddress_;
          symbol=symbol_;
